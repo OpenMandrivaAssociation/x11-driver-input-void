@@ -42,6 +42,6 @@ rm -rf %{buildroot}
 %defattr(-,root,root)
 %{_libdir}/xorg/modules/input/void_drv.la
 %{_libdir}/xorg/modules/input/void_drv.so
-%{_mandir}/man4/void.4.bz2
+%{_mandir}/man4/void.*
 
 
