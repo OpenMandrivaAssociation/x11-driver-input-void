@@ -1,6 +1,6 @@
 Name: x11-driver-input-void
-Version: 1.1.0
-Release: %mkrel 3
+Version: 1.1.1
+Release: %mkrel 1
 Summary: X.org null input driver
 Group: Development/X11
 URL: http://xorg.freedesktop.org
@@ -24,9 +24,7 @@ and/or core keyboard.
 %setup -q -n xf86-input-void-%{version}
 
 %build
-%configure2_5x	--x-includes=%{_includedir}\
-		--x-libraries=%{_libdir}
-
+%configure2_5x
 %make
 
 %install
