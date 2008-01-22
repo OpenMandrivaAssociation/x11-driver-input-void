@@ -1,8 +1,6 @@
-%define debug_package	%{nil}
-
 Name: x11-driver-input-void
 Version: 1.1.1
-Release: %mkrel 2
+Release: %mkrel 3
 Summary: X.org null input driver
 Group: Development/X11
 URL: http://xorg.freedesktop.org
