@@ -1,5 +1,5 @@
 Name: x11-driver-input-void
-Version: 1.2.0
+Version: 1.3.0
 Release: %mkrel 1
 Summary: X.org null input driver
 Group: System/X11
