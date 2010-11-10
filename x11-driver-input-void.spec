@@ -1,6 +1,6 @@
 Name: x11-driver-input-void
 Version: 1.3.1
-Release: %mkrel 1
+Release: %mkrel 2
 Summary: X.org null input driver
 Group: System/X11
 URL: http://xorg.freedesktop.org
@@ -11,6 +11,8 @@ BuildRequires: x11-proto-devel >= 1.0.0
 BuildRequires: x11-server-devel >= 1.0.1
 BuildRequires: x11-util-macros >= 1.0.1
 Conflicts: xorg-x11-server < 7.0
+
+Requires: x11-server-common %(xserver-sdk-abi-requires xinput)
 
 %description
 Void is a dummy/null X.org input driver.
