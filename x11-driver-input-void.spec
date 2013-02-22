@@ -1,6 +1,6 @@
 Name:		x11-driver-input-void
 Version:	1.4.0
-Release:	6
+Release:	7
 Summary:	X.org null input driver
 Group:		System/X11
 License:	MIT
@@ -24,6 +24,7 @@ and/or core keyboard.
 
 %prep
 %setup -qn xf86-input-void-%{version}
+autoreconf -fiv
 
 %build
 %configure2_5x
