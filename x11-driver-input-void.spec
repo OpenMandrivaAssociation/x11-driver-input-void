@@ -1,6 +1,6 @@
 Name:		x11-driver-input-void
 Version:	1.4.1
-Release:	14
+Release:	15
 Summary:	X.org null input driver
 Group:		System/X11
 License:	MIT
