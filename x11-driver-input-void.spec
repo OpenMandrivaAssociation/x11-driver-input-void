@@ -1,15 +1,14 @@
 Name:		x11-driver-input-void
-Version:	1.4.1
-Release:	17
+Version:	1.4.2
+Release:	1
 Summary:	X.org null input driver
 Group:		System/X11
 License:	MIT
 URL:		http://xorg.freedesktop.org
-Source0:	http://xorg.freedesktop.org/releases/individual/driver/xf86-input-void-%{version}.tar.bz2
-
-BuildRequires:	x11-proto-devel >= 1.0.0
-BuildRequires:	x11-server-devel >= 1.18
-BuildRequires:	x11-util-macros >= 1.0.1
+Source0:	http://xorg.freedesktop.org/releases/individual/driver/xf86-input-void-%{version}.tar.xz
+BuildRequires:	pkgconfig(xproto)
+BuildRequires:	pkgconfig(xorg-server)
+BuildRequires:	pkgconfig(xorg-macros)
 Conflicts:	xorg-x11-server < 7.0
 Requires:	x11-server-common %(xserver-sdk-abi-requires xinput)
 
@@ -22,17 +21,16 @@ It's purpose is to allow the X server to operate without a core pointer
 and/or core keyboard.
 
 %prep
-%setup -qn xf86-input-void-%{version}
-autoreconf -fiv
+%autosetup -n xf86-input-void-%{version} -p1
 
 %build
 %configure
-%make
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
 %files
 %doc COPYING
 %{_libdir}/xorg/modules/input/void_drv.so
-%{_mandir}/man4/void.*
+%doc %{_mandir}/man4/void.*
