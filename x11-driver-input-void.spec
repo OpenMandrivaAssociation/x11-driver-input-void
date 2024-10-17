@@ -4,7 +4,7 @@ Release:	2
 Summary:	X.org null input driver
 Group:		System/X11
 License:	MIT
-URL:		http://xorg.freedesktop.org
+URL:		https://xorg.freedesktop.org
 Source0:	http://xorg.freedesktop.org/releases/individual/driver/xf86-input-void-%{version}.tar.xz
 BuildRequires:	pkgconfig(xproto)
 BuildRequires:	pkgconfig(xorg-server)
